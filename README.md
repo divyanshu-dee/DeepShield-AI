@@ -1,65 +1,202 @@
-# 🚀 DeepShield AI  
-AI Image & Video Authenticity Checker  
+# 🚀 DeepShield AI
 
-DeepShield AI is a web-based platform that helps detect whether an image or video is real or AI-generated. With the rise of deepfakes and generative AI, verifying digital content has become essential.
+DeepShield AI is a web-based platform that detects whether an image or video is AI-generated or real using AI-powered analysis.
 
----
-
-## 🔍 Features
-
-- Upload **images and videos**
-- AI-based authenticity detection (prototype)
-- Confidence score output
-- Image & video preview
-- Simple and user-friendly interface
-- Cloud deployed application
+The project uses the HuggingFace Inference API for AI image detection and supports both image and video uploads through a Flask backend.
 
 ---
 
-## 🧠 How It Works
+# 🌟 Features
 
-1. User uploads an image or video  
-2. File is sent to backend (Flask)  
-3. AI logic analyzes the file  
-4. System returns:
-   - "AI Generated" or "Real"
-   - Confidence score  
-
----
-
-## 🛠️ Tech Stack
-
-- **Frontend:** HTML, CSS  
-- **Backend:** Python (Flask)  
-- **Deployment:** Render  
-- **AI (Prototype):** Simulated detection logic  
-- Future Integration: Google Vertex AI, Gemini  
+- 📸 AI Image Detection
+- 🎥 AI Video Detection
+- 🤖 HuggingFace AI Integration
+- ☁️ Cloud Deployment Ready
+- 🔒 Secure API Token Handling
+- ⚡ Flask Backend
+- 🖥️ User-Friendly Interface
 
 ---
 
-## 🌐 Live Demo
+# 🧠 How It Works
 
-👉 https://deepshield-ai.onrender.com  
+## Image Detection
+1. User uploads image
+2. Backend sends image to HuggingFace API
+3. AI model analyzes image
+4. Result + confidence score displayed
+
+## Video Detection
+1. User uploads video
+2. Frames extracted using OpenCV
+3. Selected frames analyzed
+4. Average confidence score generated
 
 ---
 
-## 💻 GitHub Repository
+# 🛠️ Tech Stack
 
-👉 https://github.com/divyanshu-dee/DeepShield-AI  
+## Frontend
+- HTML
+- CSS
+
+## Backend
+- Python
+- Flask
+
+## AI / ML
+- HuggingFace Inference API
+
+## Libraries
+- OpenCV
+- Requests
+- NumPy
+
+## Deployment
+- Render
 
 ---
 
-## ▶️ How to Run Locally
+# 📂 Project Structure
 
 ```bash
-# Clone the repository
+DeepShield-AI/
+│
+├── app.py
+├── requirements.txt
+├── README.md
+│
+├── templates/
+│   └── index.html
+│
+├── static/
+│   └── uploads/
+```
+
+---
+
+# ⚙️ Installation
+
+## Clone Repository
+
+```bash
 git clone https://github.com/divyanshu-dee/DeepShield-AI.git
+```
 
-# Navigate to project folder
+## Open Folder
+
+```bash
 cd DeepShield-AI
+```
 
-# Install dependencies
+## Install Requirements
+
+```bash
 pip install -r requirements.txt
+```
 
+---
+
+# 🔑 Environment Variable Setup
+
+Create a HuggingFace token from:
+https://huggingface.co/settings/tokens
+
+## Windows PowerShell
+
+```powershell
+$env:HF_TOKEN="your_token_here"
+python app.py
+```
+
+## Windows CMD
+
+```cmd
+set HF_TOKEN=your_token_here
+python app.py
+```
+
+---
+
+# ▶️ Run Project
+
+```bash
+python app.py
+```
+
+Open:
+```bash
+http://127.0.0.1:5000
+```
+
+---
+
+# ☁️ Render Deployment
+
+## Build Command
+
+```bash
+pip install -r requirements.txt
+```
+
+## Start Command
+
+```bash
+gunicorn app:app
+```
+
+## Environment Variable
+
+| Key | Value |
+|---|---|
+| HF_TOKEN | Your HuggingFace Token |
+
+---
+
+# 📸 Supported Files
+
+## Images
+- JPG
+- JPEG
+- PNG
+
+## Videos
+- MP4
+- AVI
+- MOV
+
+---
+
+# 🚀 Future Improvements
+
+- Better deepfake detection
+- Frame-by-frame video analysis
+- Real-time webcam detection
+- User authentication
+- Detection history
+
+---
+
+# 👨‍💻 Author
+
+Divyanshu Vishwakarma
+
+Aspiring Engineer | AI & ECE Enthusiast
+
+---
+
+# 📌 Note
+
+This project is a prototype and AI detection results may not always be 100% accurate.
+
+---
+
+# 🔗 Links
+
+## GitHub
+https://github.com/divyanshu-dee/DeepShield-AI
+
+## Live Demo
+https://deepshield-ai-yrhc.onrender.com/
 # Run the app
 python app.py
